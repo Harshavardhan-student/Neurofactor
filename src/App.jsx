@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import './styles/navigation.css'
+import './styles/hero.css'
+import './styles/aboutus.css'
+import './styles/specialties.css'
+import './styles/brandChef.css'
+import './styles/testimonials.css'
+import './styles/locations.css'
+import './styles/community.css'
+import './styles/newsletterFooter.css'
+import Navigation from './components/Navigation'
+import Hero from './components/Hero'
+import AboutUs from './components/AboutUs'
+import FeaturedMenu from './components/FeaturedMenu'
+import OnlineOrder from './components/OnlineOrder'
+import BookTable from './components/BookTable'
+import Specialties from './components/Specialties'
+import BrandChef from './components/BrandChef'
+import Testimonials from './components/Testimonials'
+import Locations from './components/Locations'
+import Community from './components/Community'
+import NewsletterFooter from './components/NewsletterFooter'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navigation />
+      <Hero />
+      <AboutUs />
+      <FeaturedMenu />
+      <OnlineOrder />
+      <BookTable />
+      <Specialties />
+      <BrandChef />
+      <Testimonials />
+      <Locations />
+      <Community />
+      <NewsletterFooter />
     </>
   )
 }

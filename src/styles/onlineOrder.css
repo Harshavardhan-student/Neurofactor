@@ -1,0 +1,189 @@
+/* Online Order Section */
+.online-order {
+  width: 100%;
+  background: #151514; /* very dark */
+  color: #fff;
+  padding: 72px 20px;
+}
+
+.online-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+/* Left column */
+.oo-left {
+  padding-right: 20px;
+}
+
+.oo-kicker {
+  display: inline-block;
+  color: #f8a100; /* gold */
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.oo-title {
+  color: #cfcfd1; /* light gray */
+  font-size: clamp(36px, 6vw, 72px);
+  margin: 0 0 24px 0;
+  line-height: 1.02;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+}
+
+.oo-copy {
+  color: #e6e6e6;
+  max-width: 520px;
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.oo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border: 1.5px solid rgba(255,255,255,0.9);
+  border-radius: 6px;
+  color: #0f0f0f; /* dark text inside white button */
+  background: rgba(255,255,255,0.98);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.oo-cta:hover {
+  box-shadow: 0 6px 18px rgba(249,185,58,0.12);
+  border-color: #f8a100;
+}
+
+.oo-cta .oo-cta-arrow {
+  color: #f8a100;
+  font-weight: 900;
+}
+
+/* Right column art */
+.oo-right {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decorative order art container for accent SVG (keeps it behind the dish) */
+.order-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1; /* behind the dish (dish is z-index:4) */
+  display: block;
+}
+
+.accent-scooter {
+  position: absolute;
+  right: 8%;
+  top: 28%;
+  width: 520px;
+  height: auto;
+  fill: none; /* no fill */
+  stroke: #f9b93a; /* gold stroke */
+  stroke-width: 2;
+  opacity: 0.95;
+  z-index: 2; /* sits under dish but above background art */
+  transform-origin: center;
+  animation: float-lr 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes float-lr {
+  from { transform: translateX(-18px); }
+  to { transform: translateX(18px); }
+}
+
+.scooter-art {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  display: block;
+  opacity: 0.45;
+  transform: translateY(6%);
+  z-index: 0;
+}
+
+.oo-dish-wrap {
+  position: absolute;
+  right: 6%;
+  top: 6%;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-6%);
+  z-index: 4; /* sits above scooter art */
+}
+
+.oo-dish {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 4px 14px rgba(0,0,0,0.45);
+  border: 6px solid rgba(0,0,0,0.35);
+  transform: translateY(-6%);
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .online-container {
+    grid-template-columns: 1fr;
+  }
+
+  .scooter-art {
+    max-width: 80%;
+    margin: 30px auto 0;
+    transform: translateY(0);
+  }
+
+  .oo-right {
+    height: 360px;
+    margin-top: 20px;
+  }
+
+  .oo-dish-wrap {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: translateY(0);
+    margin: 0 auto;
+  }
+
+  .oo-dish {
+    width: 300px;
+    height: 300px;
+  }
+
+  .oo-title {
+    font-size: clamp(28px, 6vw, 48px);
+    letter-spacing: 0.18em;
+  }
+
+  .oo-copy {
+    max-width: 100%;
+  }
+}

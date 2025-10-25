@@ -1,0 +1,188 @@
+/* Featured Menu Section */
+.featured-menu {
+  background: #1e2121;
+  color: #fff;
+  padding: 72px 0;
+}
+
+.featured-menu .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Section Title */
+.featured-kicker {
+  display: block;
+  color: #f7b400;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+.featured-title {
+  font-size: clamp(24px, 4vw, 32px);
+  line-height: 1.3;
+  letter-spacing: 0.15em;
+  margin: 0 0 56px 0;
+  font-weight: 800;
+}
+
+/* Cards Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: center;
+}
+
+/* Card Styling */
+.featured-card {
+  position: relative;
+  padding: 24px;
+  transition: transform 400ms ease;
+  /* create a local stacking context so children z-index behaves predictably */
+  z-index: 1;
+  /* allow watermark to extend outside the card bounds where needed */
+  overflow: visible;
+}
+
+/* Center card gets special treatment */
+.featured-card-center {
+  transform: scale(1.05);
+  /* make center card sit above the neighboring cards */
+  z-index: 3;
+}
+
+
+/* Watermark styling */
+.card-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* larger, scalable watermark that remains subtle */
+  /* increase max size so letters extend beyond circular image */
+  font-size: clamp(48px, 10vw, 140px);
+  font-weight: 900;
+  text-transform: lowercase;
+  /* slightly stronger but still very faint so it reads as a watermark */
+    /* increase opacity for better visibility -- tweakable */
+    color: rgba(255,255,255,0.12);
+  pointer-events: none;
+  line-height: 0.85;
+  /* place watermark above the card background but below the image */
+  z-index: 2;
+    /* move watermark upward so it peeks out above/beside the circle */
+    transform: rotate(-6deg) translateY(-18%);
+  letter-spacing: 0.06em;
+  text-align: center;
+  /* subtle glow so the faint text reads on darker backgrounds */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    /* smoothly animate small adjustments if needed */
+    transition: color 220ms ease, transform 300ms ease;
+}
+
+/* Food Image Container */
+.food-image-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Makes it square */
+  margin-bottom: 24px;
+}
+
+/* Circular image crop */
+.food-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Soft shadow around the image */
+  box-shadow: 
+    0 8px 24px rgba(0,0,0,0.2),
+    0 2px 8px rgba(0,0,0,0.1),
+    0 0 0 1px rgba(255,255,255,0.05);
+  /* make sure the food image sits above the watermark */
+  z-index: 3;
+}
+
+/* Card glow effect */
+.featured-card::before {
+  content: '';
+  position: absolute;
+  inset: 15%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Dish Details */
+.dish-name {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.dish-price {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
+/* Explore Button */
+.btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  transition: all 300ms ease;
+}
+
+.btn-explore:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.btn-arrow {
+  opacity: 0.7;
+  transition: transform 300ms ease;
+}
+
+.btn-explore:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .featured-card-center {
+    transform: none;
+  }
+  
+  .food-image-wrap {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

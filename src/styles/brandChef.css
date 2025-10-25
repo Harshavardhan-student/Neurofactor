@@ -1,0 +1,139 @@
+/* Brand Chef Section */
+.brand-chef-section {
+  background-color: #111;
+  color: white;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Section Label */
+.section-label {
+  color: #FFB800;
+  font-size: 0.875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Main Heading */
+.section-heading {
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin-bottom: 4rem;
+  font-weight: 300;
+}
+
+/* Chef Container */
+.chef-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Column - Chef Image */
+.chef-image-container {
+  flex: 1;
+  max-width: 600px;
+  position: relative; /* Add this for absolute positioning of signature */
+}
+
+.chef-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Right Column - Chef Details */
+.chef-details {
+  flex: 1;
+  position: relative;
+  padding: 20px 0;
+}
+
+.chef-header {
+  margin-bottom: 2rem;
+}
+
+.chef-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.chef-title {
+  color: #999;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.chef-bio {
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.chef-bio p {
+  margin-bottom: 1.5rem;
+}
+
+.chef-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+  right: -20px;
+  bottom: 40px;
+  transform: rotate(-5deg); /* Slight rotation for natural handwritten look */
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .chef-container {
+    flex-direction: column;
+  }
+
+  .chef-image-container,
+  .chef-details {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .chef-signature {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .chef-name {
+    font-size: 1.75rem;
+  }
+
+  .chef-signature {
+    font-size: 2rem;
+  }
+}
