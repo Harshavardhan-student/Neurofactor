@@ -1,16 +1,74 @@
-# React + Vite
+Tiffinbox React Web App
+A modern, fully responsive React web app for "The Tiffin Box" featuring a rich South Indian cuisine UI, engaging homepage sections, menu/ordering, chef highlights, testimonials, Instagram gallery, and more — all Figma-accurate and mobile-friendly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Pixel-perfect Figma-matched homepage sections (Hero, About, Specialties, Chef, Testimonials, Locations, Gallery, Newsletter)
 
-Currently, two official plugins are available:
+Responsive design (mobile, tablet, desktop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mobile hamburger navigation and animated menus
 
-## React Compiler
+Dark theme, gold accent branding, and custom SVG/iconography
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Modular React components per section (Hero, Navigation, etc.)
 
-## Expanding the ESLint configuration
+Easy static content/image swapping
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 Getting Started
+Prerequisites
+Node.js (version 20.19+ recommended)
+
+npm or yarn
+
+Installation
+bash
+# Clone the repo
+git clone https://github.com/yourusername/tiffinbox-react.git
+cd tiffinbox-react
+
+# Install dependencies
+npm install
+# or
+yarn install
+Running the Project Locally
+bash
+npm start
+# or
+yarn start
+Visit http://localhost:3000 to view the app in your browser.
+
+📦 Folder Structure
+text
+src/
+  components/
+    Navigation.jsx
+    Hero.jsx
+    About.jsx
+    Specialties.jsx
+    BrandChef.jsx
+    Testimonials.jsx
+    Locations.jsx
+    Community.jsx
+    NewsletterFooter.jsx
+  styles/
+    hero.css
+    navigation.css
+    ...
+  assets/
+    images, icons
+public/
+  index.html
+  favicon.ico
+  ...
+
+⚙️ Customization
+All key sections are modular React components in src/components/.
+
+Site images and icons can be replaced in /public or /src/assets/images/.
+
+To change menu routes or content, edit the respective component’s JSX and CSS.
+
+✍️ Contributing
+Pull requests and issues are welcome!
+Please fork the repo and open a PR to propose changes. For major changes, open an issue first to discuss what you'd like to change.
+
