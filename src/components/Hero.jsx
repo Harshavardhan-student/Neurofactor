@@ -17,40 +17,43 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Main three-column hero grid (left / center / right) */}
-      <div className="hero-grid container">
-        <div className="hero-col hero-left">
-          <div className="accent-vertical" aria-hidden="true" />
+      {/* Main hero grid with integrated social icons */}
+      <div className="hero-main container">
+        <div className="hero-grid">
+          <div className="hero-col hero-left">
+            <div className="accent-vertical" aria-hidden="true" />
 
-          <h1 id="hero-heading" className="hero-title">
-            <span>AUTHENTIC</span>
-            <span>SOUTH INDIAN</span>
-            <span>CUISINE</span>
-          </h1>
+            <h1 id="hero-heading" className="hero-title">
+              <span>AUTHENTIC</span>
+              <span>SOUTH INDIAN</span>
+              <span>CUISINE</span>
+            </h1>
 
-          <a href="#order" className="btn-outline" aria-label="Order now">
-            Order Now <span className="btn-arrow">→</span>
-          </a>
-        </div>
+            <a href="#order" className="btn-outline" aria-label="Order now">
+              Order Now <span className="btn-arrow">→</span>
+            </a>
+          </div>
 
-        <div className="hero-col hero-center" aria-hidden="true">
-          <div className="plate-wrap">
-            <img src="/bowl.png" alt="Plate of food" className="plate-image" />
+          <div className="hero-col hero-center" aria-hidden="true">
+            <div className="plate-wrap">
+              <img src="/bowl.png" alt="Plate of food" className="plate-image" />
+            </div>
+          </div>
+
+          <div className="hero-col hero-right">
+            <div className="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon fb">
+                <FaFacebookF />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon ig">
+                <FaInstagram />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon tw">
+                <FaTwitter />
+              </a>
+            </div>
           </div>
         </div>
-
-        <div className="social-icons">
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon fb">
-    <FaFacebookF />
-  </a>
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon ig">
-    <FaInstagram />
-  </a>
-  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon tw">
-    <FaTwitter />
-  </a>
-</div>
-
       </div>
 
       {/* About section continues directly below inside same black card */}
